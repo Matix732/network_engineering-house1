@@ -20,10 +20,10 @@
 ***
 
 ### Spis treści:  
-1. [Schemat administracyjny](https://github.com/Matix732/network_engineering-house1#1-schemat-administracyjny-sieci) - grafika
-1.1. [Konfiguracja sieci](https://github.com/Matix732/network_engineering-house1#11-konfiguracja-sieci-lan) - rozpiska
-2. [Schemat urządzeń i kabli](https://github.com/Matix732/network_engineering-house1#2-schamat-roz%C5%82o%C5%BCenia-sieci-i-urz%C4%85dze%C5%84) - grafika  
-2.1. [Połączenia fizyczne]() - konfiguracja urządzeń  
+1. [Schemat administracyjny](https://github.com/Matix732/network_engineering-house1#1-schemat-administracyjny-sieci) - grafika  
+1.1. [Konfiguracja sieci](https://github.com/Matix732/network_engineering-house1#11-konfiguracja-sieci-lan) - rozpiska  
+2. [Schemat urządzeń i kabli](https://github.com/Matix732/network_engineering-house1#2-schamat-roz%C5%82o%C5%BCenia-sieci-i-urz%C4%85dze%C5%84) - grafika    
+2.1. [Połączenia fizyczne](https://github.com/Matix732/network_engineering-house1/blob/main/README.md#21-po%C5%82%C4%85czenia-fizyczne) - konfiguracja urządzeń   
 
 ***
 
