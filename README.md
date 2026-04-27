@@ -20,10 +20,10 @@
 ***
 
 ### Spis treści:  
-1. [Schemat administracyjny](https://github.com/Matix732/network_engineering-house1#11-schamat-administracyjny-sieci) - grafika
-1.1. [Konfiguracja sieci](https://github.com/Matix732/network_engineering-house1#11-schamat-administracyjny-sieci) - rozpiska
-2. [Schemat urządzeń i kabli](https://github.com/Matix732/network_engineering-house1#21-schamat-roz%C5%82o%C5%BCenia-sieci-i-urz%C4%85dze%C5%84) - grafika  
-2.1. [Połączenia fizyczne](https://github.com/Matix732/network_engineering-house1#2-konfiguracja-sieci-lan) - konfiguracja urządzeń  
+1. [Schemat administracyjny](https://github.com/Matix732/network_engineering-house1#1-schemat-administracyjny-sieci) - grafika
+1.1. [Konfiguracja sieci](https://github.com/Matix732/network_engineering-house1#11-konfiguracja-sieci-lan) - rozpiska
+2. [Schemat urządzeń i kabli](https://github.com/Matix732/network_engineering-house1#2-schamat-roz%C5%82o%C5%BCenia-sieci-i-urz%C4%85dze%C5%84) - grafika  
+2.1. [Połączenia fizyczne]() - konfiguracja urządzeń  
 
 ***
 
@@ -37,10 +37,12 @@
 | 200 | 192.168.200.0 | 255.255.255.0, /24 | 192.168.200.0 - 192.168.200.254| 192.168.200.1 | static + DHCP | .100 - .254 |
 | 300 | 192.168.300.0 | 255.255.255.224, /27| 192.168.300.0 - 192.168.300.31 |192.168.300.1 | static | - | 
 
-## 2.1. Schamat rozłożenia sieci i urządzeń
+## 2. Schamat rozłożenia sieci i urządzeń
 ![Schamat rozmieszczenia sieci](schemat_rozmieszczenia.png)
 
-**Połączenia Mikrotik**
+## 2.1. Połączenia fizyczne
+
+**Mikrotik**
 | interfejs | VLAN | adres | urządzenie | 
 | --- | --- | --- | --- | 
 | ether1 | -   | 192.168.0.1 | ISP modem | 
