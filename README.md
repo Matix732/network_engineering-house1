@@ -53,7 +53,6 @@
 | **LAN IP** | Adres bramy ISP | `192.168.0.1` | Domyślny adres podsieci dostawcy |
 | **DMZ** | Adres docelowy | `192.168.0.2` | Przekierowanie całego ruchu z zewnątrz bezpośrednio na port WAN MikroTika (niezbędne dla VPN) |
 | **DHCP Server** | Rezerwacja IP | `192.168.0.2` | Przypisane na stałe do adresu MAC portu ether1 w MikroTiku |
-| **Wi-Fi** | Status radia | Wyłączone | Wyłączone, aby uniknąć zakłóceń z dedykowanym Access Pointem |
 
 **Router główny (MikroTik ax3)**
 | Interfejs | Funkcja / VLAN | Status Portu | Adresacja | Urządzenie docelowe | 
