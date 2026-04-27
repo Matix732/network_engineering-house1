@@ -80,3 +80,7 @@ POE_switch rónież należy do urządzeń "dumb", jedynie zasili kamery i połą
 | **Port 7** | - | - | Pusty | - |
 | **Port 8** | - | - | Pusty | - |
 
+---
+
+#### TO DO: 
+* zasady firewall
