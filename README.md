@@ -6,9 +6,9 @@
 1. **Podział sieci na VLANY** - kompletna izolacja środowiska Windows Server, systemu monitoringu i użytkowników domowych.
 2. **Instalacja VPN (WireGuard)** - dla zdalnego, szyfrowanego dostępu do monitoringu i systemu smart home.
 3. **Adresacja urządzeń**  
-  3.1 **Routing statyczny** - tam gdzie to możliwe  
-  3.2 **DHCP "Static-Only" + ARP Reply-Only\*** - w przypadku urządzeń takich jak np. kamery (połączonych z routerem przez niezarządzalny POE_switch)
-  3.3 **DHCP** - dla użytkowników domowych
+  3.1. **Routing statyczny** - tam gdzie to możliwe  
+  3.2. **DHCP "Static-Only" + ARP Reply-Only\*** - w przypadku urządzeń takich jak np. kamery (połączonych z routerem przez niezarządzalny POE_switch)
+  3.3. **DHCP** - dla użytkowników domowych
 >Używamy DHCP Static-Only do centralnego przypisania urządzeniom stałego adresu IP po adresie MAC, oraz ARP Reply-Only dla zabezpieczenia przez dołączeniem do sieci niechcianych urządzeń z ustawionym IP. 
 
 ---
