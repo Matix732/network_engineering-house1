@@ -42,14 +42,21 @@
 
 ## 2.1. Połączenia fizyczne
 
-**Mikrotik**
+**router Mikrotik**
 | interfejs | VLAN | adres | urządzenie | 
 | --- | --- | --- | --- | 
 | ether1 | -   | 192.168.0.1 | ISP modem | 
 | ether2 | 200 | 192.168.200.2 | Access Point | 
 | ether3 | 200 | DHCP | dumb_switch* | 
 | ether4 | 300 | 192.168.300.2 - .31 | POE_switch* |
+| ether5.1 | 100 | 192.168.100.2 | Tenda switch |
+| ether5.2 | 200 | 192.168.200.2 | Tenda switch |
+| ether5.3 | 300 | 192.168.300.2 | Tenda switch |
+| wlan1 | 200 | DHCP | WIFI users |
+| wlan2 | 200 | DHCP | WIFI users |
 
 *1) "dumb_switch" służy za rozszerzenie liczby portów routera, podłączymy tam urządzenia niewymagające konfiguracji IP.  
 *2) POE_switch należy również do urządzeń "dumb", jedynie zasili kamery i połączy je z siecią. Kamery 
+
+**switch Tenda**
 
