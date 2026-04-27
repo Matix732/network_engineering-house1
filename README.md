@@ -19,18 +19,18 @@
 
 ***
 
-### Spis treści: 
-1. [Konfiguracja sieci](#1) - opis  
-1.1. [Schemat administracyjny](#1.1) - grafika
-2. [Połączenia fizyczne](#2) - konfiguracja urządzeń  
-2.1. [Schemat urządzeń i kabli](#2.1) - grafika  
+### Spis treści:  
+1. [Schemat administracyjny](https://github.com/Matix732/network_engineering-house1#11-schamat-administracyjny-sieci) - grafika
+1.1. [Konfiguracja sieci](https://github.com/Matix732/network_engineering-house1#11-schamat-administracyjny-sieci) - rozpiska
+2. [Schemat urządzeń i kabli](https://github.com/Matix732/network_engineering-house1#21-schamat-roz%C5%82o%C5%BCenia-sieci-i-urz%C4%85dze%C5%84) - grafika  
+2.1. [Połączenia fizyczne](https://github.com/Matix732/network_engineering-house1#2-konfiguracja-sieci-lan) - konfiguracja urządzeń  
 
 ***
 
-## 1.1. Schamat administracyjny sieci
+## 1. Schemat administracyjny sieci
 ![Schamat administracyjny sieci](schemat_administracyjny.png)
 
-## 2. Konfiguracja sieci LAN
+## 1.1 Konfiguracja sieci LAN
 | VLAN | network address | maska | Host IP range | default gate | IP assign | DHCP pool |
 | --- | --- | --- | --- | --- | --- | --- | 
 | 100 | 192.168.100.0 | 255.255.255.252, /30 | 192.168.100.0 - 192.168.100.4 | 192.168.100.1 | static | - | 
