@@ -7,7 +7,9 @@
 2. Instalacja VPN - dla zdalnego, szyfrowanego dostępu do monitoringu i systemu smart home.
 3. Adresacja urządzeń  
   3.1 Routing statyczny - tam gdzie to możliwe  
-  3.2 DHCP "Static-Only" - w przypadku urządzeń takich jak np. kamery (połączonych z routerem przez niezarządzalny POE_switch)  
+  3.2 DHCP "Static-Only" + ARP Reply-Only* - w przypadku urządzeń takich jak np. kamery (połączonych z routerem przez niezarządzalny POE_switch)  
+>Używamy DHCP Static-Only do przypisania urządzeniom stałego adresu IP, oraz ARP Reply-Only dla zabezpieczenia przez dołączeniem do sieci niechcianych urządzeń z ustawionym IP. 
+
 
 ***
   
@@ -55,8 +57,8 @@
 | wlan1 | 200 | DHCP | WIFI users |
 | wlan2 | 200 | DHCP | WIFI users |
 
-*1) "dumb_switch" służy za rozszerzenie liczby portów routera, podłączymy tam urządzenia niewymagające konfiguracji IP.  
-*2) POE_switch należy również do urządzeń "dumb", jedynie zasili kamery i połączy je z siecią. Kamery 
+> "dumb_switch" służy za rozszerzenie liczby portów routera, podłączymy tam urządzenia niewymagające konfiguracji IP.  
+POE_switch rónież należy do urządzeń "dumb", jedynie zasili kamery i połączy je z siecią.
 
 **switch Tenda**
 
