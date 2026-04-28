@@ -7,7 +7,7 @@
 2. **Instalacja VPN (WireGuard)** - dla zdalnego, szyfrowanego dostępu do monitoringu i systemu smart home.
 3. **Adresacja urządzeń**  
   3.1 **Routing statyczny** - tam gdzie to możliwe  
-  3.2 **DHCP "Static-Only" + ARP Reply-Only\*** - w przypadku urządzeń takich jak np. kamery (połączonych z routerem przez niezarządzalny POE_switch)  
+  3.2 **DHCP Static-Only + ARP Reply-Only\*** - w przypadku urządzeń takich jak np. kamery (połączonych z routerem przez niezarządzalny POE_switch)  
   3.3 **DHCP** - dla użytkowników domowych
 >Używamy DHCP Static-Only do centralnego przypisania urządzeniom stałego adresu IP po adresie MAC, oraz ARP Reply-Only dla zabezpieczenia przez dołączeniem do sieci niechcianych urządzeń z ustawionym IP. 
 
@@ -55,30 +55,30 @@
 | **DHCP Server** | Rezerwacja IP | `192.168.0.2` | Przypisane na stałe do adresu MAC portu ether1 w MikroTiku |
 
 **Router główny (MikroTik ax3)**
-| Interfejs | Funkcja / VLAN | Status Portu | Adresacja | Urządzenie docelowe | 
-| :--- | :--- | :--- | :--- | :--- | 
-| **ether1** | WAN | Domyślny | `192.168.0.2` (DMZ na ISP) | ISP Modem (`192.168.0.1`) | 
-| **ether2** | VLAN 200 | Access (Untagged) | Brama: `.20.1` | Access Point | 
-| **ether3** | VLAN 200 | Access (Untagged) | Brama: `.20.1` | dumb_switch (Użytkownicy) | 
-| **ether4** | VLAN 300 | Access (Untagged) | Brama: `.30.1` | POE_switch (strych - Kamery) |
-| **ether5** | VLAN 100, 200, 300 | **Trunk (Tagged)** | - | Tenda Switch (mały pokój) |
-| **wlan1** | VLAN 200 | Wirtualny Access | Brama: `.20.1` | Wi-Fi 2.4GHz Users |
-| **wlan2** | VLAN 200 | Wirtualny Access | Brama: `.20.1` | Wi-Fi 5GHz Users |
+| Interfejs | Funkcja / VLAN | Status Portu | Adresacja | Brama | Urządzenie docelowe | 
+| :--- | :--- | :--- | :--- | :--- |  :--- |
+| **ether1** | WAN | Domyślny | `192.168.0.2` (DMZ na ISP) | | ISP Modem (`192.168.0.1`) | 
+| **ether2** | VLAN 200 | Access (Untagged) | `192.168.20.2` | `192.168.20.1` | Access Point | 
+| **ether3** | VLAN 200 | Access (Untagged) | DHCP | `192.168.20.1` | dumb_switch (Użytkownicy) | 
+| **ether4** | VLAN 300 | Access (Untagged) | DHCP Static-Only | `192.168.30.1` | POE_switch (strych - Kamery) |
+| **ether5** | VLAN 100, 200, 300 | **Trunk (Tagged)** | - | - | Tenda Switch (mały pokój) |
+| **wlan1** | VLAN 200 | Wirtualny Access | DHCP | `192.168.20.1` | Wi-Fi 2.4GHz Users |
+| **wlan2** | VLAN 200 | Wirtualny Access | DHCP | `192.168.20.1` | Wi-Fi 5GHz Users |
 
 > "dumb_switch" służy za rozszerzenie liczby portów routera, podłączymy tam urządzenia niewymagające konfiguracji IP.  
 POE_switch rónież należy do urządzeń "dumb", jedynie zasili kamery i połączy je z siecią.
 
 **Switch Zarządzalny L2 (Tenda TEG2208D - Mały pokój)**
-| Port | Funkcja / VLAN | Status Portu | Urządzenie docelowe | Uwagi |
-| :--- | :--- | :--- | :--- | :--- |
-| **Port 1** | VLAN 100, 200, 300 | **Trunk (Tagged)** | MikroTik `ether5` | Uplink z routera |
-| **Port 2** | VLAN 100 | Access (Untagged) | Windows Server | Static IP |
-| **Port 3** | VLAN 200 | Access (Untagged) | Drukarka sieciowa | Static z poza puli DHCP |
-| **Port 4** | VLAN 300 | Access (Untagged) | Home Assistant Server | Static IP |
-| **Port 5** | VLAN 300 | Access (Untagged) | Old NVR | Static IP |
-| **Port 6** | VLAN 300 | Access (Untagged) | POE_switch | Zasilanie kamer (Mały pokój) |
-| **Port 7** | - | - | Pusty | - |
-| **Port 8** | - | - | Pusty | - |
+| Port | Funkcja / VLAN | Status Portu | Adresacja | Urządzenie docelowe | Uwagi |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Port 1** | VLAN 100, 200, 300 | **Trunk (Tagged)** | | MikroTik `ether5` | Uplink z routera |
+| **Port 2** | VLAN 100 | Access (Untagged) | `192.168.10.2` | Windows Server | Static IP |
+| **Port 3** | VLAN 200 | Access (Untagged) | `192.168.20.90` |Drukarka sieciowa | Static z poza puli DHCP |
+| **Port 4** | VLAN 300 | Access (Untagged) | `192.168.30.2` | Home Assistant Server | Static IP |
+| **Port 5** | VLAN 300 | Access (Untagged) | `192.168.30.3` | Old NVR | Static IP |
+| **Port 6** | VLAN 300 | Access (Untagged) | - | POE_switch | Zasilanie kamer (Mały pokój) |
+| **Port 7** | - | - | - | - |
+| **Port 8** | - | - | - | - |
 
 ---
 
