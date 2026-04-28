@@ -105,7 +105,7 @@ Wszystkie poniższe reguły dotyczą ruchu *przechodzącego* przez router (z jed
 
 ---
 
-## 4. Konfiguracja i Dostęp VPN (WireGuard)
+## 4. Konfiguracja VPN (WireGuard)
 >VPN funkcjonuje jako niezależny, wirtualny interfejs sieciowy w routerze z własną podsiecią. Każde zaufane urządzenie (Peer) otrzymuje unikalny stały adres IP wewnątrz tunelu.
 
 ### 4.1 Adresacja Wirtualnej Sieci VPN
